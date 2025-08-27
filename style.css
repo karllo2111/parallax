@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1000;
+    flex-wrap: wrap; /* supaya navigasi tidak meluber */
+}
+
+.logo{
+    font-size: 2em;
+    color: rgb(59, 164, 127);
+    pointer-events: none;
+    margin-right: 300px;
+}
+
+.navigation{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navigation a{
+    text-decoration: none;
+    padding: 8px 15px;
+    color: rgb(59, 164, 127);
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: 600;
+}
+
+.navigation a:hover,
+.navigation a.active{
+    background: rgb(59, 164, 127);
+    color: #fff;
+    transition: .3s;
+}
+
+.parallax{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+#text{
+    position: absolute;
+    font-size: 5em;
+    color:  rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* menjaga proporsi gambar */
+    pointer-events: none;
+}
+
+.sec{
+    position: relative;
+    background:#003329;
+    padding: 100px;
+    width: 100%;
+}
+
+.sec h2{
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.sec p{
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        padding: 20px 40px;
+    }
+
+    .logo{
+        font-size: 1.5em;
+        margin-left: 120px;
+        margin-bottom: 20px;
+    }
+
+    .navigation a{
+        padding: 6px 10px;
+        margin: 3px;
+        font-size: 0.9em;
+    }
+
+    #text{
+        font-size: 3em;
+    }
+
+    .sec{
+        padding: 50px 20px;
+        margin-top: 0px;
+    }
+
+    .sec h2{
+        font-size: 2em;
+    }
+
+    .sec p{
+        font-size: 0.9em;
+    }
+}
